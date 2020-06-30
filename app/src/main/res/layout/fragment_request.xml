@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_margin="@dimen/padding_20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/container1"
+            >
+
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/request"
+            android:layout_gravity="center">
+
+        </ImageView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Movie or Series Name"
+            style="@style/TextViewStyle"
+            android:padding="10dp"
+            >
+
+        </TextView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/edtname"
+            android:hint="Movie or Series Name"
+            android:background="@drawable/edtbg"
+            android:paddingLeft="10dp"
+            style="@style/TextStyle">
+
+        </EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Movie or Series Image"
+            style="@style/TextViewStyle"
+            android:padding="10dp">
+
+        </TextView>
+
+
+        <EditText
+            android:id="@+id/edtimage"
+            style="@style/TextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edtbg"
+            android:hint="Movie or Series Image"
+            android:paddingLeft="10dp">
+
+        </EditText>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <Button
+                android:id="@+id/btnsave"
+                android:layout_margin="@dimen/padding_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_20dp"
+                android:layout_weight="1"
+                android:text="Request"
+                android:background="@color/infoColor"
+                android:textColor="@color/white_gray"
+                android:drawableLeft="@drawable/ic_request"
+                android:drawableTint="@color/white_gray"
+                android:textAllCaps="false">
+
+            </Button>
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/btncancel"
+                android:layout_margin="@dimen/padding_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_20dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:background="@color/errorColor"
+                android:textColor="@color/white_gray"
+                android:drawableLeft="@drawable/ic_close"
+                android:drawableTint="@color/white_gray">
+
+            </Button>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/container2"
+            >
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

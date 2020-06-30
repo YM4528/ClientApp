@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_margin="@dimen/padding_10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:elevation="@dimen/padding_10dp"
+        android:background="@color/white_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/corner_radius">
+
+        <LinearLayout
+            android:background="@color/white_gray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:background="@color/white_gray"
+                android:id="@+id/epName"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Episode 1"
+                android:padding="@dimen/padding_20dp">
+            </TextView>
+
+            <ImageView
+                android:background="@color/white_gray"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_series"
+                android:layout_gravity="center"
+                android:id="@+id/playep">
+
+            </ImageView>
+
+            <ImageView
+                android:visibility="gone"
+                android:background="@color/white_gray"
+                android:layout_marginLeft="@dimen/padding_20dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_download"
+                android:tint="@color/successColor"
+                android:layout_gravity="center"
+                android:id="@+id/downloadep">
+
+            </ImageView>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

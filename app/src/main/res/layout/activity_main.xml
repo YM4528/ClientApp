@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    tools:openDrawer="left"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+
+
+
+      <LinearLayout
+          android:visibility="gone"
+          android:id="@+id/maindata"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <androidx.appcompat.widget.Toolbar
+              android:background="@color/colorWhite"
+              android:layout_width="match_parent"
+              android:layout_height="?actionBarSize"
+              android:id="@+id/tbar"/>
+
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/navContact"/>
+
+
+
+
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_centerInParent="true"
+          android:layout_margin="@dimen/padding_20dp"
+          android:id="@+id/numberpin"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <TextView
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/padding_20dp"
+              android:text="Write number 5 \n six times"
+              android:textSize="50sp"
+              android:textColor="@color/colorPrimary">
+
+          </TextView>
+          
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="60dp"
+              android:background="@drawable/edtbg"
+              android:hint="555555"
+              android:id="@+id/number"
+              android:padding="@dimen/padding_20dp"
+              >
+
+          </EditText>
+
+          <Button
+              android:id="@+id/sure"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Confirm"
+              android:textColor="@color/colorWhite"
+              android:background="@color/successColor"
+              android:layout_marginTop="30dp"
+              android:padding="@dimen/padding_20dp"
+              android:textSize="20sp"
+              android:textStyle="bold"
+
+              >]
+          </Button>
+
+
+      </LinearLayout>
+
+
+  </RelativeLayout>
+
+
+<com.google.android.material.navigation.NavigationView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity = "left"
+    android:id="@+id/navView"
+    app:headerLayout="@layout/headerlayout"
+    app:menu="@menu/navmenu"
+    app:itemIconTint="@color/colorPink">
+
+
+
+</com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

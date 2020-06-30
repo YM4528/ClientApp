@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".VideoDetailFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:background="@color/colorOnPrimary"
+                android:id="@+id/playerContent"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                    android:id="@+id/player_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true">
+
+                </ProgressBar>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/control"
+                android:layout_below="@id/playerContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colourOnPrimaryLight">
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/padding_20dp"
+                    android:id="@+id/fullscreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_fullscreen"
+                    android:tint="@color/colorWhite">
+                </ImageView>
+
+                <ImageView
+
+                    android:layout_marginRight="@dimen/padding_10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_fav"
+                    android:tint="@color/colorWhite">
+                </ImageView>
+
+
+
+            </RelativeLayout>
+
+            <com.google.android.ads.nativetemplates.TemplateView
+                android:layout_marginRight="@dimen/padding_20dp"
+                android:id="@+id/smalltemplate"
+                android:layout_below="@+id/control"
+                app:gnt_template_type="@layout/gnt_medium_template_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <com.google.android.ads.nativetemplates.TemplateView
+                android:layout_margin="20dp"
+                android:id="@+id/largetemplate"
+                android:layout_below="@+id/smalltemplate"
+                app:gnt_template_type="@layout/gnt_medium_template_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btndownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colourOnPrimaryLight"
+                android:src="@drawable/ic_download"
+                android:tint="@color/colorWhite"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                >
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>
